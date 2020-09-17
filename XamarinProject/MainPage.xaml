@@ -29,5 +29,9 @@
                 </FormattedString>
             </Label.FormattedText>
         </Label>
+
+        <Label x:Name="lblMensaje"
+               HorizontalOptions="Center"
+               VerticalOptions="CenterAndExpand"/>
     </StackLayout>
 </ContentPage>

@@ -6,40 +6,61 @@
        x:Class="XamarinProject.AppShell"
        Title="Titulo de Shell">
 
-    <ShellContent Title="Inicio">
+    <Shell.FlyoutHeaderTemplate x:Key="HeaderTemplate">
+        <DataTemplate>
+            <Grid BackgroundColor="LightBlue"
+                  HeightRequest="150">
+                <Image Source="icon_home.png"
+                       Aspect="AspectFill"/>
+
+                <Label Text="Menu Lateral"
+                       TextColor="White"
+                       FontSize="Medium"
+                       FontAttributes="Bold"/>
+            </Grid>
+        </DataTemplate>
+    </Shell.FlyoutHeaderTemplate>
+
+
+    <!---->
+    <!--<ShellContent Title="Inicio"
+                  Icon="icon_home.png">
         <local:MainPage/>
     </ShellContent>
 
-    <ShellContent Title="Cuenta">
+    <ShellContent Title="Cuenta"
+                  Icon="icon_account.png">
         <paginas:PageCuenta/>
-    </ShellContent>
-    
+    </ShellContent>-->
 
-    <!--<FlyoutItem Title="XamarinProject"
+    <!---->
+    <FlyoutItem Title="XamarinProject"
                 FlyoutDisplayOptions="AsMultipleItems">
 
-        <ShellContent Title="Inicio">
+        <ShellContent Title="Inicio"
+                      Icon="icon_home.png">
             <local:MainPage/>
         </ShellContent>
+                      
+        
 
-        <ShellContent Title="Cuenta">
-                <paginas:PageCuenta/>
-            </ShellContent>
+        <Tab Title="Opciones"
+             Icon="icon_account.png"
+             >
+            <ShellContent Title="Cuenta"
+                ContentTemplate="{DataTemplate paginas:PageCuenta}"/>
 
-        <Tab Title="Opciones">
-            <ShellContent Title="Cuenta">
-                <paginas:PageCuenta/>
-            </ShellContent>
-
-            <ShellContent Title="Acerca de">
+            <ShellContent Title="Acerca de"
+                          Icon="icon_info.png">
                 <paginas:PageAcercaDe/>
             </ShellContent>
         </Tab>
 
-        
 
-    </FlyoutItem>-->
+    </FlyoutItem>
 
-    <MenuItem Text="sitio web" Clicked="MenuItem_Clicked"/>
+    <MenuItem Text="sitio web"
+              IconImageSource="icon_info.png"
+              Clicked="MenuItem_Clicked"/>
 
 </Shell>

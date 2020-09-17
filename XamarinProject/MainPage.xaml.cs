@@ -8,11 +8,19 @@ using Xamarin.Forms;
 
 namespace XamarinProject
 {
+
+    [DesignTimeVisible(false)]
+    [QueryProperty("mensaje", "Mensaje")]
     public partial class MainPage : ContentPage
     {
+       
         public MainPage()
         {
             InitializeComponent();
+        }
+
+        public string Mensaje {
+            set { lblMensaje.Text = value; }
         }
     }
 }

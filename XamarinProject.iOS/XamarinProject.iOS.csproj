@@ -133,4 +133,9 @@
       <Name>XamarinProject</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\icon_account.png" />
+    <BundleResource Include="Resources\icon_home.png" />
+    <BundleResource Include="Resources\icon_info.png" />
+  </ItemGroup>
 </Project>
