@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:paginas="clr-namespace:XamarinProject.Paginas"
+       xmlns:local="clr-namespace:XamarinProject"
+       x:Class="XamarinProject.AppShell"
+       Title="Titulo de Shell">
+
+    <ShellContent Title="Inicio">
+        <local:MainPage/>
+    </ShellContent>
+
+    <ShellContent Title="Cuenta">
+        <paginas:PageCuenta/>
+    </ShellContent>
+    
+
+    <!--<FlyoutItem Title="XamarinProject"
+                FlyoutDisplayOptions="AsMultipleItems">
+
+        <ShellContent Title="Inicio">
+            <local:MainPage/>
+        </ShellContent>
+
+        <ShellContent Title="Cuenta">
+                <paginas:PageCuenta/>
+            </ShellContent>
+
+        <Tab Title="Opciones">
+            <ShellContent Title="Cuenta">
+                <paginas:PageCuenta/>
+            </ShellContent>
+
+            <ShellContent Title="Acerca de">
+                <paginas:PageAcercaDe/>
+            </ShellContent>
+        </Tab>
+
+        
+
+    </FlyoutItem>-->
+
+    <MenuItem Text="sitio web" Clicked="MenuItem_Clicked"/>
+
+</Shell>
