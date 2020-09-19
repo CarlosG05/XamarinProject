@@ -137,5 +137,7 @@
     <BundleResource Include="Resources\icon_account.png" />
     <BundleResource Include="Resources\icon_home.png" />
     <BundleResource Include="Resources\icon_info.png" />
+    <BundleResource Include="Resources\icon_estatura.png" />
+    <BundleResource Include="Resources\icon_peso.png" />
   </ItemGroup>
 </Project>

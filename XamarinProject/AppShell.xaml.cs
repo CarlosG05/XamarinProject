@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 
 using Xamarin.Forms;
+using XamarinProject.Paginas;
 
 namespace XamarinProject
 {
@@ -10,6 +11,8 @@ namespace XamarinProject
         public AppShell()
         {
             InitializeComponent();
+            //Routing.RegisterRoute("inicio", typeof(MainPage));
+            Routing.RegisterRoute("resultado", typeof(PageCuenta));
         }
 
         async void MenuItem_Clicked(System.Object sender, System.EventArgs e)

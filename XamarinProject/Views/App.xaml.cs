@@ -12,7 +12,7 @@ namespace XamarinProject
 
             //MainPage = new MainPage();
             MainPage = new AppShell();
-            Routing.RegisterRoute("pagina", typeof(MainPage));      
+                
         }
 
         protected override void OnStart()

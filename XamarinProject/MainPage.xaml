@@ -8,27 +8,88 @@
     <StackLayout>
         <Frame
             BackgroundColor="#2196F3"
-            Padding="24"
-            
+            Margin="0"            
             CornerRadius="0">
             <Label
-                Text="Proyecto Xamarin.Forms"
+                Text="Proyecto Xamarin"
                 HorizontalTextAlignment="Center"
                 TextColor="White"
                 FontSize="24" />
         </Frame>
-        <Label Text="Start developing now" FontSize="Title" Padding="30,10,30,10" />
-        <Label Text="Make changes to your XAML file and save to see your UI update in the running app with XAML Hot Reload. Give it a try!" FontSize="16" Padding="30,0,30,0" />
-        <Label FontSize="16" Padding="30,24,30,0">
-            <Label.FormattedText>
-                <FormattedString>
-                    <FormattedString.Spans>
-                        <Span Text="Learn more at " />
-                        <Span Text="https://aka.ms/xamarin-quickstart" FontAttributes="Bold" />
-                    </FormattedString.Spans>
-                </FormattedString>
-            </Label.FormattedText>
-        </Label>
+
+        <Label Text="Cálculo IMC"
+               FontSize="Title"
+               Padding="30,30,30,10" />
+
+        <Label Text="Calcula tu índice de masa corporal"
+               FontSize="16"
+               Padding="30,0,30,0" />
+
+
+        <Grid
+            VerticalOptions="FillAndExpand"
+            HorizontalOptions="FillAndExpand"
+            RowSpacing="30"
+            Margin="30,30">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="10*"/>
+                <ColumnDefinition Width="90*"/>
+            </Grid.ColumnDefinitions>
+            
+
+            <Entry
+                x:Name="etEstatura"
+                Placeholder="Ingresa la estatura (cm)"
+                Keyboard="Numeric"
+                Grid.Row="0"
+                Grid.Column="0"
+                Grid.ColumnSpan="2"
+                HorizontalTextAlignment="Center"
+                />
+
+            <Image Source="icon_estatura.png"
+                   Grid.Row="0"
+                   Grid.Column="0"/>
+
+            <Entry
+                x:Name="etPeso"
+                Placeholder="Ingresa el peso (Kg)"
+                Keyboard="Numeric"
+                Grid.Row="1"
+                Grid.Column="0"
+                Grid.ColumnSpan="2"
+                HorizontalTextAlignment="Center"/> 
+
+            <Image Source="icon_peso.png"
+                   Grid.Row="1"
+                   Grid.Column="0"/>
+
+            <Button
+                Text="Calcular"
+                TextColor="White"
+                BackgroundColor="#2196F3"
+                Grid.Row="2"
+                Grid.Column="0"
+                Grid.ColumnSpan="2"
+                Margin="60,0"
+                Clicked="Button_Clicked"
+            />
+        </Grid>
+
+        
+
+
+
+              
+        
+
+      
 
         <Label x:Name="lblMensaje"
                HorizontalOptions="Center"

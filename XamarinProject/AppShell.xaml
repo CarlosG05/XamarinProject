@@ -38,23 +38,40 @@
                 FlyoutDisplayOptions="AsMultipleItems">
 
         <ShellContent Title="Inicio"
+                      Route="inicio"
                       Icon="icon_home.png">
             <local:MainPage/>
         </ShellContent>
-                      
-        
 
-        <Tab Title="Opciones"
-             Icon="icon_account.png"
-             >
-            <ShellContent Title="Cuenta"
-                ContentTemplate="{DataTemplate paginas:PageCuenta}"/>
+        <ShellContent Title="Resultado"
+                      Route="resultado"
+                      Icon="icon_account.png">
+            <paginas:PageCuenta/>
+        </ShellContent>
 
-            <ShellContent Title="Acerca de"
+        <ShellContent Title="Acerca de"
+                          Route="acerca_de"
                           Icon="icon_info.png">
                 <paginas:PageAcercaDe/>
             </ShellContent>
-        </Tab>
+
+        
+                      
+        
+
+        <!--<Tab Title="Opciones"
+             Icon="icon_account.png"
+             >
+            <ShellContent Title="Cuenta"
+                          Route="cuenta"
+                ContentTemplate="{DataTemplate paginas:PageCuenta}"/>
+
+            <ShellContent Title="Acerca de"
+                          Route="acerca_de"
+                          Icon="icon_info.png">
+                <paginas:PageAcercaDe/>
+            </ShellContent>
+        </Tab>-->
 
 
     </FlyoutItem>
